@@ -20,7 +20,8 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/server.ts",
-    "start": "node server.js"
+    "start": "node build/server.js",
+    "build":"tsc"
   },
   "dependencies": {
     "@types/node": "^17.0.10",
