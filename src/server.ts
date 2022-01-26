@@ -1,3 +1,3 @@
 import app from "./app";
 
-app.listen(process.env.$PORT, () => console.log("funcionou"));
+app.listen(process.env.PORT, () => console.log("funcionou"));
