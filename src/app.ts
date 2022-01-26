@@ -12,7 +12,11 @@ class App {
     connect(process.env.MONGO_DB as string).then(() => console.log("funcionou"));
 
     this.app = express();
-    this.app.use(cors());
+    this.app.use(cors({
+      origin:'https://gifted-johnson-96d68f.netlify.app', 
+      credentials:true,            //access-control-allow-credentials:true
+      optionSuccessStatus:200
+  }));
     this.app.use(express.json());
     this.app.use(routes);
   }
