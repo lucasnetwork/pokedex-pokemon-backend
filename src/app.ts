@@ -9,7 +9,7 @@ class App {
   app: Express;
 
   constructor() {
-    connect(process.env.MONGO_DB).then(() => console.log("funcionou"));
+    connect(process.env.MONGO_DB as string).then(() => console.log("funcionou"));
 
     this.app = express();
     this.app.use(cors());

@@ -21,8 +21,8 @@ class Pokemon {
     console.log("pokemons");
     console.log(req.query);
     const pokemons = await PokemonModel.find()
-      .skip(req.query.offset)
-      .limit(req.query.limit)
+      .skip(Number(req.query.offset))
+      .limit(Number(req.query.limit))
       .populate("moves")
       .populate("types")
       .populate({
